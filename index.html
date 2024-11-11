@@ -10,8 +10,10 @@
       
       
       
+        <link rel="next" href="github/">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+      <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
@@ -20,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#modaq-20-reference-design" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="MODAQ 2.0 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href="." title="MODAQ 2.0 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -101,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Home
             
           </span>
         </div>
@@ -202,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="MODAQ 2.0 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href="." title="MODAQ 2.0 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -217,10 +224,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -229,26 +256,44 @@
   
 
       </a>
-    </li>
-  
-
-    
       
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/roadmap/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Roadmap
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m2-goals-and-design-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      M2 Goals and Design Requirements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -260,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/github/" class="md-nav__link">
+      <a href="github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/hardware/" class="md-nav__link">
+      <a href="hardware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -300,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/software/" class="md-nav__link">
+      <a href="software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -320,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/techref/" class="md-nav__link">
+      <a href="techref/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/hmi/" class="md-nav__link">
+      <a href="hmi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/links/" class="md-nav__link">
+      <a href="links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,6 +435,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m2-goals-and-design-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      M2 Goals and Design Requirements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -401,8 +474,58 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="modaq-20-reference-design">MODAQ 2.0 Reference Design<img align="right" src="img/MODAQ_NREL_Logo.png"><a class="headerlink" href="#modaq-20-reference-design" title="Permanent link">&para;</a></h1>
+<p>NREL's first generation <a href="https://nrel.github.io/MODAQ/" target="_blank">MODAQ</a> is a highly performant, capable, and extensible platform for data acquisition, control, and automation that is based on the National Instruments cRIO controller line and family of expansion chassis and I/O modules. While MODAQ v1.0 (M1, hereafter) has proven itself in both the field and laboratory, several factors have indicated the need for additional solutions that were not well served on the M1 architecture, which led to the development of MODAQ v2.0 (M2). M2 is an approach based on generally available hardware and open-source development tools. </p>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
+<p>Before diving too deeply into the details, it's important to understand the motivation behind M2. There were several reasons, but they all boil down to either: </p>
+<ol>
+<li>We did not have a solution that satisfied particular project requirements, or</li>
+<li>Feedback from customers and partners </li>
+</ol>
+<p>In the case of #1, projects may have power or physical limitations that simply could not be met with any cRIO-based M1 variant. What was often the case is that we needed a solution that could be powered by batteries or otherwise have low power consumption. While our go-to cRIO (<a href="https://www.ni.com/en-us/shop/model/crio-9049.html" target="_blank">9049</a>) in M1 is relatively power efficient (60W at maximum load), it's not practical for battery or power constrained applications. And despite its compactness, it can be too big (and heavy) for some use cases. Further, a cRIO was often overkill for some applications. While the cRIO scales up nicely, it does not scale well in the other direction. </p>
+<p>With regards to feedback from the companies and organizations we frequently work with, there's often resistance to the M1 platform based on system cost or universality of the software development language- or both. </p>
+<p>National Instruments publishes the price of its hardware on their website without the dreaded "Click for Quote" obfuscation, so it's easy to get an idea of the price range for the controller and I/O modules. With strained budgets and an eye toward the future, where an organization may be considering arrays of devices or multiple device variants, it can be questionable if the M1 platform is a good fit, particularly when considering a pivot to production. </p>
+<p>Then there's the concern about the development language. M1 is written in LabVIEW, which is National Instruments' proprietary programming language. Here the issues are mostly around subscription costs and availability of LabVIEW developers. There's no sugar-coating that annual <a href="https://www.ni.com/en/shop/labview/select-edition.html" target="_blank">subscription costs</a> for a LabVIEW Professional seat can be eye-opening- especially after bundling the Real-Time and FPGA modules. </p>
+<p>Aside from the cost, availability of skilled LabVIEW developers pales in comparison to that of languages such as Python or C/C++. LabVIEW does not even appear in popular <a href="https://survey.stackoverflow.co/2023/#section-most-popular-technologies-programming-scripting-and-markup-languages" target="_blank">development language rankings</a>. While it might not be fair to compare LabVIEW to general-purpose languages - and it's probably fairer to compare it to industrial programming languages such as those used for PLC or other vendor-specific packages - the fact remains that LabVIEW is rather niche and there's not an abundance of well-rounded engineers that just happen to be competent in LabVIEW in the job market. </p>
+<p>The intent here is not to bash on NI or LabVIEW, but rather to point out some of the challenges involved when collaborating with commercial enterprises- and even academia to some degree. We use NI and LabVIEW extensively at NREL and appreciate how it enables rapid development of data acquisition and control systems, complete with graphical user interfaces, for test setups. Some of us have experience in this ecosystem dating back to the 1900's! </p>
+<h2 id="m2-goals-and-design-requirements">M2 Goals and Design Requirements<a class="headerlink" href="#m2-goals-and-design-requirements" title="Permanent link">&para;</a></h2>
+<p>There is little point to developing a new system without first establishing some overarching goals. Much of this can be gleaned from the previous motivation section, but here we explicitly state the goals we're trying to achieve with M2. </p>
+<p>The primary goals of MODAQ 2.0 are to:</p>
+<ul>
+<li>Develop hardware and software architectures that can adapt to a wide range of missions and use-cases</li>
+<li>Assure measurement performance and quality parity with M1</li>
+<li>Utilize a development stack based on popular programming languages and tools</li>
+<li>Avoid vendor lock-in and single-source solutions</li>
+</ul>
+<p>... and some Design Requirements:</p>
+<ul>
+<li>Modularity in both the design of the hardware and software</li>
+<li>Support a range of controller options and I/O types</li>
+<li>Ruggedized durability and 24/7 performance  </li>
+<li>Precision time keeping and synchronization</li>
+<li>Real-time, deterministic performance</li>
+<li>Support for common communications protocols </li>
+<li>Configuration through a text-based file or utility</li>
+<li>Supervisory and automation control capability</li>
+<li>HMI and web-based data dashboard</li>
+<li>Built-in AWS S3 and SMTP support</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -436,10 +559,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>

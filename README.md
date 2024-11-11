@@ -1,1 +1,0 @@
-This is the branch for the MODAQ2 github pages.
