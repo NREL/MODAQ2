@@ -1,1 +1,1 @@
-Please visit our Github Organization for access to the MODAQ 2 code: https://github.com/NREL-MODAQ2
+This is the branch for the MODAQ2 github pages.
