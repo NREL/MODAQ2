@@ -2,6 +2,7 @@ This branch is the source for the documentation. Live github pages is located at
 
 build with
 ```bash
+cd docs
 mkdocs gh-deploy
 ```
 
