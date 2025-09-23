@@ -14,6 +14,8 @@
 # M2 Configurator ![MODAQ M2 Configurator Guide](img/m2_logo.png#right)
 
 </p>
+Configurator NREL-MODAQ2 Repo: <a href="https://github.com/NREL-MODAQ2/configurator" target="_blank">NREL-MODAQ2/configurator</a>
+
 Several parameters within M2 can be configured through the use of a yaml file that is located in <a href="https://github.com/NREL-MODAQ2/m2_core/blob/main/m2_launch/config/m2_config.yaml" target="_blank">`/src/m2_core/m2_launch/config`</a>. This allows the M2 source code to be somewhat stateless, while allowing common or project-specific changes to be applied at runtime. 
 
 While the yaml file is plain text and can be edited in any basic text editor, this is not recommended since invalid inputs or formatting errors could result in unintended settings or render the file unusable. The Configurator exposes all available configurable items for the selected M2 nodes and performs validation on user inputs.
