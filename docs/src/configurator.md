@@ -66,7 +66,7 @@ While not absolutely necessary, we do recommended creating a Python virtual envi
 3. Activate the workspace:<br>
 MacOS/Linux: `source modaq_venv/bin/activate` or `source ./modaq_venv/bin/activate`<br>
 Windows (cmd): `modaq_venv\Scripts\activate` or `modaq_venv\Scripts\activate.bat`<br>
-Windows (PowerShell): `modaq_venv\Scripts\activate.psl`
+Windows (PowerShell): `modaq_venv\Scripts\Activate.ps1`
 4. Install required libraries. 
     - `pip install -r requirements.txt`<br>
     or if you prefer not to use our requirements.txt file
