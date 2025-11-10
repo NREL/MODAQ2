@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>Hardware - MODAQ 2.0 (M2)</title>
+        <title>Hardware - MODAQ 2 (M2)</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="MODAQ 2.0 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href=".." title="MODAQ 2 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MODAQ 2.0 (M2)
+            MODAQ 2 (M2)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="MODAQ 2.0 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href=".." title="MODAQ 2 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    MODAQ 2.0 (M2)
+    MODAQ 2 (M2)
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -750,13 +750,13 @@
 </tr>
 <tr>
 <td>Perle</td>
-<td>IDS-710HP<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup></td>
+<td>IDS-710HP<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 <td>1</td>
 <td>PoE/PTP Ethernet Switch</td>
 </tr>
 <tr>
 <td>Cradlepoint</td>
-<td>IBR-600C<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">3</a></sup></td>
+<td>IBR-600C<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>1</td>
 <td>LTE Modem</td>
 </tr>
@@ -856,7 +856,7 @@ The <a href="https://www.hardkernel.com/shop/odroid-h3/" target="_blank">ODROID 
 <ul>
 <li>Small 110x110mm footprint</li>
 <li>Dual SODIMM DDR4 RAM slots and one NVMe m.2 slot</li>
-<li>PTP support on the Realtek RTL8125B ethernet controllers <a href="https://askubuntu.com/questions/1502690/realtek-rtl8125-ethernet-controller-ieee-1588-ptp-support-in-ubuntu-22-04-3" target="_blank">requires some effort</a> and not as robust as the Intel ethernet controllers.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">1</a></sup></li>
+<li>PTP support on the Realtek RTL8125B ethernet controllers <a href="https://askubuntu.com/questions/1502690/realtek-rtl8125-ethernet-controller-ieee-1588-ptp-support-in-ubuntu-22-04-3" target="_blank">requires some effort</a> and not as robust as the Intel ethernet controllers.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
 <li>Supports input power in the range of 14-20 VDC, which is a little unusual.</li>
 <li>Full stress power consumption is ~18W and &lt;1W in suspend mode</li>
 </ul>
@@ -907,14 +907,14 @@ The world of inertial sensors has a very broad price, performance, accuracy, and
 <div class="footnote">
 <hr />
 <ol>
-<li id="fn:3">
-<p>The newly released ODROID H4 comes with <a href="https://www.intel.com/content/www/us/en/products/sku/210599/intel-ethernet-controller-i226v/specifications.html" target="_blank">Intel I226-V</a> ethernet controller chips, which have much better PTP support.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
 <li id="fn:1">
-<p>Cheaper unmanaged switches could be substituted if PTP and/or PoE support not desired.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Cheaper unmanaged switches could be substituted if PTP and/or PoE support not desired.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>IBR-600C has been recently discontinued. S700 looks like the most likely replacement.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>IBR-600C has been recently discontinued. S700 looks like the most likely replacement.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>The newly released ODROID H4 comes with <a href="https://www.intel.com/content/www/us/en/products/sku/210599/intel-ethernet-controller-i226v/specifications.html" target="_blank">Intel I226-V</a> ethernet controller chips, which have much better PTP support.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

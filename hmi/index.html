@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>HMI - MODAQ 2.0 (M2)</title>
+        <title>HMI - MODAQ 2 (M2)</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="MODAQ 2.0 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href=".." title="MODAQ 2 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MODAQ 2.0 (M2)
+            MODAQ 2 (M2)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="MODAQ 2.0 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href=".." title="MODAQ 2 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    MODAQ 2.0 (M2)
+    MODAQ 2 (M2)
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -781,9 +781,9 @@ A Human-Machine Interface, or HMI, is a control panel or portal that enables hig
 <p>Frontend:</p>
 <ul>
 <li>An IDE or text editor for composing the web documents. If you're using VS Code for ROS2, that will work fine.</li>
-<li><a href="https://github.com/RobotWebTools/roslibjs" target="_blank">roslibjs</a>. This will be installed as part of the rosbridge_suite on the backend, but needs to be 'visible' to the web server. Visibility might involve providing the correct path to the library or our preference, place of copy of the <a href="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js" target="_blank">minified</a> (<a href="https://github.com/RobotWebTools/roslibjs/blob/ros2/build/roslib.min.js" target="_blank">alternative link</a>) roslib in the /js folder in your nginx html document root.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup> </li>
-<li><a href="https://www.chartjs.org/" target="_blank">chart.js v3.3.2</a><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">3</a></sup> (<a href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" target="_blank">minified</a>). This is only required if you want to have plots in your HMI. </li>
-<li><a href="https://nagix.github.io/chartjs-plugin-streaming/master/" target="_blank">chartjs-plugin-streaming</a> <a href="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v2.0.0/chartjs-plugin-streaming.min.js" target="_blank">(minified)</a>. and its dependencies<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">4</a></sup> (which are noted in its Getting Started section of the chartjs-plugin-streaming webpage linked in the last sentence). This is only required if you intend to have plots in your HMI and want those plots to update in near realtime (AKA streaming).</li>
+<li><a href="https://github.com/RobotWebTools/roslibjs" target="_blank">roslibjs</a>. This will be installed as part of the rosbridge_suite on the backend, but needs to be 'visible' to the web server. Visibility might involve providing the correct path to the library or our preference, place of copy of the <a href="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js" target="_blank">minified</a> (<a href="https://github.com/RobotWebTools/roslibjs/blob/ros2/build/roslib.min.js" target="_blank">alternative link</a>) roslib in the /js folder in your nginx html document root.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> </li>
+<li><a href="https://www.chartjs.org/" target="_blank">chart.js v3.3.2</a><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> (<a href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" target="_blank">minified</a>). This is only required if you want to have plots in your HMI. </li>
+<li><a href="https://nagix.github.io/chartjs-plugin-streaming/master/" target="_blank">chartjs-plugin-streaming</a> <a href="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v2.0.0/chartjs-plugin-streaming.min.js" target="_blank">(minified)</a>. and its dependencies<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> (which are noted in its Getting Started section of the chartjs-plugin-streaming webpage linked in the last sentence). This is only required if you intend to have plots in your HMI and want those plots to update in near realtime (AKA streaming).</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -875,7 +875,7 @@ A Human-Machine Interface, or HMI, is a control panel or portal that enables hig
 <h4 id="roslib-subscriber">roslib Subscriber<a class="headerlink" href="#roslib-subscriber" title="Permanent link">&para;</a></h4>
 <p>roslib.js is a javascript library used on the webserver that can subscribe to topics published on M2 and display the data in a webpage. In addition it allows for publication of topics from the webpage as well as using or creating services.</p>
 <p>First, an object is created to establish the websocket connection to the ROS2 instance on the M2 controller (showing the most relevant code snippet):</p>
-<p><code>const ros = new ROSLIB.Ros({ url: "ws://localhost:9090" });</code><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">1</a></sup></p>
+<p><code>const ros = new ROSLIB.Ros({ url: "ws://localhost:9090" });</code><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <p>Next, a listener object is created to subscribe to the desired topic being published on the controller. In this example we have a temperature and humidity sensor that is acquired in M2 using MODBUS TCP and the scaled data are published to the <code>ths</code> topic. </p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// MODBUS Temperature and Humidity Sensor</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">ths_listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ROSLIB</span><span class="p">.</span><span class="nx">Topic</span><span class="p">({</span>
@@ -966,17 +966,17 @@ Then we insert each data point into the chart object:</p>
 <div class="footnote">
 <hr />
 <ol>
-<li id="fn:4">
-<p>Replace 'localhost' with the IP address of the M2 controller hosting the HMI webpage.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
 <li id="fn:1">
-<p>Using the minified version of any of the required JS libraries is totally optional. We prefer minified, since it's a smaller overall payload and can improve performance. The disadvantage to using minified libraries is that all unnecessary whitespace characters are removed, so inspecting or edited the library code can be very difficult- even though it's still in plain text.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Using the minified version of any of the required JS libraries is totally optional. We prefer minified, since it's a smaller overall payload and can improve performance. The disadvantage to using minified libraries is that all unnecessary whitespace characters are removed, so inspecting or edited the library code can be very difficult- even though it's still in plain text.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>We're using chartjs v3.3.2 since at the time we were creating the HMI there were compatibility issues with the plugin-streaming library on v4 and higher. That may have been resolved in later releases of plugin-streaming.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>We're using chartjs v3.3.2 since at the time we were creating the HMI there were compatibility issues with the plugin-streaming library on v4 and higher. That may have been resolved in later releases of plugin-streaming.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>Since finding the dependencies as minified libraries in the correct version can be a bit of a pain, here are direct links: <a href="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js" target="_blank">luxon v3.4.40<a/> and <a href="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0" target="_blank">chartjs-adapter-luxon v1.0.0</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>Since finding the dependencies as minified libraries in the correct version can be a bit of a pain, here are direct links: <a href="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js" target="_blank">luxon v3.4.40<a/> and <a href="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0" target="_blank">chartjs-adapter-luxon v1.0.0</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Replace 'localhost' with the IP address of the M2 controller hosting the HMI webpage.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

@@ -14,15 +14,15 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>MODAQ 2.0 (M2)</title>
+        <title>MODAQ 2 (M2)</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modaq-20-reference-design" class="md-skip">
+        <a href="#modaq-2-reference-design" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="MODAQ 2.0 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href="." title="MODAQ 2 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MODAQ 2.0 (M2)
+            MODAQ 2 (M2)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -212,13 +212,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="MODAQ 2.0 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2.0 (M2)" data-md-component="logo">
+    <a href="." title="MODAQ 2 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    MODAQ 2.0 (M2)
+    MODAQ 2 (M2)
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -519,12 +519,12 @@
 
 
 
-<h1 id="modaq-20-reference-design">MODAQ 2.0 Reference Design<img align="right" src="img/MODAQ_NREL_Logo.png"><a class="headerlink" href="#modaq-20-reference-design" title="Permanent link">&para;</a></h1>
+<h1 id="modaq-2-reference-design">MODAQ 2 Reference Design<img align="right" src="img/MODAQ_NREL_Logo.png"><a class="headerlink" href="#modaq-2-reference-design" title="Permanent link">&para;</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These documents are still under development. Please contact the open-water testing support team at NREL for more information. <a href="https://www.nrel.gov/water/open-water-testing.html" target="_blank">Contact Us</a></p>
 </div>
-<p>NREL's first generation <a href="https://nrel.github.io/MODAQ/" target="_blank">MODAQ</a> is a highly performant, capable, and extensible platform for data acquisition, control, and automation that is based on the National Instruments cRIO controller line and family of expansion chassis and I/O modules. While MODAQ v1.0 (M1, hereafter) has proven itself in both the field and laboratory, several factors have indicated the need for additional solutions that were not well served on the M1 architecture, which led to the development of MODAQ v2.0 (M2). M2 is an approach based on generally available hardware and open-source development tools. </p>
+<p>NREL's first generation <a href="https://nrel.github.io/MODAQ/" target="_blank">MODAQ</a> (Modular Open-source Data AcQuisition) is a highly performant, capable, and extensible platform for data acquisition, control, and automation that is based on the National Instruments cRIO controller line and family of expansion chassis and I/O modules. While MODAQ v1.0 (M1, hereafter) has proven itself in both the field and laboratory, several factors have indicated the need for additional solutions that were not well served on the M1 architecture, which led to the development of MODAQ 2 (M2). M2 is an approach based on generally available hardware and open-source development tools. </p>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
 <p>Before diving too deeply into the details, it's important to understand the motivation behind M2. There were several reasons, but they all boil down to either: </p>
 <ol>
@@ -539,7 +539,7 @@
 <p>The intent here is not to bash on NI or LabVIEW, but rather to point out some of the challenges involved when collaborating with commercial enterprises- and even academia to some degree. We use NI and LabVIEW extensively at NREL and appreciate how it enables rapid development of data acquisition and control systems, complete with graphical user interfaces, for test setups. Some of us have experience in this ecosystem dating back to the 1900's! </p>
 <h2 id="m2-goals-and-design-requirements">M2 Goals and Design Requirements<a class="headerlink" href="#m2-goals-and-design-requirements" title="Permanent link">&para;</a></h2>
 <p>There is little point to developing a new system without first establishing some overarching goals. Much of this can be gleaned from the previous motivation section, but here we explicitly state the goals we're trying to achieve with M2. </p>
-<p>The primary goals of MODAQ 2.0 are to:</p>
+<p>The primary goals of MODAQ 2 are to:</p>
 <ul>
 <li>Develop hardware and software architectures that can adapt to a wide range of missions and use-cases</li>
 <li>Assure measurement performance and quality parity with M1</li>
