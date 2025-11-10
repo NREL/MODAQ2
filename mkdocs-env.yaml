@@ -1,0 +1,25 @@
+name: mkdocs-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # Core MkDocs
+      - mkdocs==1.6.1
+      
+      # Theme
+      - mkdocs-material>=9.5
+      
+      # Markdown extensions (used in your config)
+      - pymdown-extensions>=10.8
+      
+      # Plugins
+      - mkdocs-print-site-plugin
+      - mkdocs-mermaid2-plugin
+      - mkdocs-awesome-pages-plugin
+      - mkdocs-minify-plugin
+      
+      # Optional helpers
+      - mkdocs-git-revision-date-localized-plugin

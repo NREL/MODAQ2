@@ -9,3 +9,12 @@ mkdocs gh-deploy
 You can also test the webpage build with `mkdocs serve`.
 
 Please visit our Github Organization for access to the MODAQ 2 code: https://github.com/NREL-MODAQ2
+
+
+```bash
+
+conda create env -f mkdocs-env.yaml
+
+conda activate mkdocs-env
+
+```
