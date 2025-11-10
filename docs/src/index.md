@@ -1,9 +1,9 @@
-# MODAQ 2.0 Reference Design<img align="right" src="img/MODAQ_NREL_Logo.png">
+# MODAQ 2 Reference Design<img align="right" src="img/MODAQ_NREL_Logo.png">
 
 !!! note
     These documents are still under development. Please contact the open-water testing support team at NREL for more information. <a href="https://www.nrel.gov/water/open-water-testing.html" target="_blank">Contact Us</a>
 
-NREL's first generation <a href="https://nrel.github.io/MODAQ/" target="_blank">MODAQ</a> is a highly performant, capable, and extensible platform for data acquisition, control, and automation that is based on the National Instruments cRIO controller line and family of expansion chassis and I/O modules. While MODAQ v1.0 (M1, hereafter) has proven itself in both the field and laboratory, several factors have indicated the need for additional solutions that were not well served on the M1 architecture, which led to the development of MODAQ v2.0 (M2). M2 is an approach based on generally available hardware and open-source development tools. 
+NREL's first generation <a href="https://nrel.github.io/MODAQ/" target="_blank">MODAQ</a> (Modular Open-source Data AcQuisition) is a highly performant, capable, and extensible platform for data acquisition, control, and automation that is based on the National Instruments cRIO controller line and family of expansion chassis and I/O modules. While MODAQ v1.0 (M1, hereafter) has proven itself in both the field and laboratory, several factors have indicated the need for additional solutions that were not well served on the M1 architecture, which led to the development of MODAQ 2 (M2). M2 is an approach based on generally available hardware and open-source development tools. 
 
 ## Motivation
 
@@ -28,7 +28,7 @@ The intent here is not to bash on NI or LabVIEW, but rather to point out some of
 
 There is little point to developing a new system without first establishing some overarching goals. Much of this can be gleaned from the previous motivation section, but here we explicitly state the goals we're trying to achieve with M2. 
 
-The primary goals of MODAQ 2.0 are to:
+The primary goals of MODAQ 2 are to:
 
 - Develop hardware and software architectures that can adapt to a wide range of missions and use-cases
 - Assure measurement performance and quality parity with M1

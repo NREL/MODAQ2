@@ -1,4 +1,4 @@
-site_name: MODAQ 2.0 (M2)
+site_name: MODAQ 2 (M2)
 docs_dir: 'src'
 site_dir: 'docs'
 nav:
