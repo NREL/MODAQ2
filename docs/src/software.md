@@ -12,7 +12,7 @@
 </style>
 
 # M2 Software ![MODAQ M2 Software](img/m2_logo.png#right)
-This section will discuss the software architecture of the M2 and explain the reference design available on the NREL GitHub at <a href="https://github.com/NREL/MODAQ2" target="_blank">MODAQ2</a>. For discussion on design decisions and details on technical aspects of the software design, please see the Technical Reference page.
+This section will discuss the software architecture of the M2 and explain the reference design available on the NLR GitHub at <a href="https://github.com/NREL/MODAQ2" target="_blank">MODAQ2</a>. For discussion on design decisions and details on technical aspects of the software design, please see the Technical Reference page.
 
 ### Introduction
 M2 has been designed around the ROS2 ecosystem of libraries and tools to provide users a well established way of developing a data acquisition system. ROS2 was selected because it is easy to learn with many free online training resources, completely free and open-source, supports multiple programming languages, and is reliable for long term use in industrial settings. There is also a plethora of already existing ROS packages that users can leverage in addition to the packages developed in the MODAQ 2 project.

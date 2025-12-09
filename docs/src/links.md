@@ -20,7 +20,7 @@
 
 M2 Repo: [github.com/NREL/MODAQ2](https://github.com/NREL/MODAQ2)
 
-NREL: [nrel.gov/water/open-water-testing.html](https://www.nrel.gov/water/open-water-testing.html)
+NLR: [nrel.gov/water/open-water-testing.html](https://www.nrel.gov/water/open-water-testing.html)
 
 ## ROS2
 

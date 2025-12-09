@@ -1,9 +1,9 @@
-# MODAQ 2 Reference Design<img align="right" src="img/MODAQ_NREL_Logo.png">
+# MODAQ 2 Reference Design<img align="right" src="img/MODAQ_Logo.png">
 
 !!! note
-    These documents are still under development. Please contact the open-water testing support team at NREL for more information. <a href="https://www.nrel.gov/water/open-water-testing.html" target="_blank">Contact Us</a>
+    These documents are still under development. Please contact the open-water testing support team at NLR for more information. <a href="https://www.nrel.gov/water/open-water-testing.html" target="_blank">Contact Us</a>
 
-NREL's first generation <a href="https://nrel.github.io/MODAQ/" target="_blank">MODAQ</a> (Modular Open-source Data AcQuisition) is a highly performant, capable, and extensible platform for data acquisition, control, and automation that is based on the National Instruments cRIO controller line and family of expansion chassis and I/O modules. While MODAQ v1.0 (M1, hereafter) has proven itself in both the field and laboratory, several factors have indicated the need for additional solutions that were not well served on the M1 architecture, which led to the development of MODAQ 2 (M2). M2 is an approach based on generally available hardware and open-source development tools. 
+The National Laboratory of the Rockies' (NLR) first generation <a href="https://nrel.github.io/MODAQ/" target="_blank">MODAQ</a> (Modular Open-source Data AcQuisition) is a highly performant, capable, and extensible platform for data acquisition, control, and automation that is based on the National Instruments cRIO controller line and family of expansion chassis and I/O modules. While MODAQ v1.0 (M1, hereafter) has proven itself in both the field and laboratory, several factors have indicated the need for additional solutions that were not well served on the M1 architecture, which led to the development of MODAQ 2 (M2). M2 is an approach based on generally available hardware and open-source development tools. 
 
 ## Motivation
 
@@ -22,7 +22,7 @@ Then there's the concern about the development language. M1 is written in LabVIE
 
 Aside from the cost, availability of skilled LabVIEW developers pales in comparison to that of languages such as Python or C/C++. LabVIEW does not even appear in popular <a href="https://survey.stackoverflow.co/2023/#section-most-popular-technologies-programming-scripting-and-markup-languages" target="_blank">development language rankings</a>. While it might not be fair to compare LabVIEW to general-purpose languages - and it's probably fairer to compare it to industrial programming languages such as those used for PLC or other vendor-specific packages - the fact remains that LabVIEW is rather niche and there's not an abundance of well-rounded engineers that just happen to be competent in LabVIEW in the job market. 
 
-The intent here is not to bash on NI or LabVIEW, but rather to point out some of the challenges involved when collaborating with commercial enterprises- and even academia to some degree. We use NI and LabVIEW extensively at NREL and appreciate how it enables rapid development of data acquisition and control systems, complete with graphical user interfaces, for test setups. Some of us have experience in this ecosystem dating back to the 1900's! 
+The intent here is not to bash on NI or LabVIEW, but rather to point out some of the challenges involved when collaborating with commercial enterprises- and even academia to some degree. We use NI and LabVIEW extensively at NLR and appreciate how it enables rapid development of data acquisition and control systems, complete with graphical user interfaces, for test setups. Some of us have experience in this ecosystem dating back to the 1900's! 
 
 ## M2 Goals and Design Requirements
 
