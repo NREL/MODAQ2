@@ -18,7 +18,7 @@
 
 ## MODAQ
 
-M2 Repo: [github.com/NREL/MODAQ2](https://github.com/NREL/MODAQ2)
+M2 Docs Repo: [github.com/NREL/MODAQ2](https://github.com/NREL/MODAQ2)
 
 NLR: [nrel.gov/water/open-water-testing.html](https://www.nrel.gov/water/open-water-testing.html)
 

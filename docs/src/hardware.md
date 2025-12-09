@@ -13,7 +13,7 @@
 
 # M2 Hardware ![MODAQ M2 Hardware](img/m2_logo.png#right)
 
-This section will discuss the hardware supported by M2 and present a reference design (RD) example that is supported by the M2 source code provided in the <a href="https://github.com/NREL-MODAQ2" target="_blank">GitHub repository</a>. It should be noted that any hardware mentioned has been either used in or evaluated for M2 projects, however this should not be interpreted as an endorsement or approval of any mentioned hardware product by NLR. Due to the general and flexible nature of the M2 software, M2 applications are not necessarily limited to these hardware selections. 
+This section will discuss the hardware supported by M2 and present a reference design (RD) example that is supported by the M2 source code provided in the <a href="https://github.com/MODAQ2" target="_blank">GitHub repository</a>. It should be noted that any hardware mentioned has been either used in or evaluated for M2 projects, however this should not be interpreted as an endorsement or approval of any mentioned hardware product by NLR. Due to the general and flexible nature of the M2 software, M2 applications are not necessarily limited to these hardware selections. 
 
 !!! note 
 
