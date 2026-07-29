@@ -2,7 +2,7 @@
 This section will discuss the software architecture of M2 and explain the reference design available on the NLR GitHub at <a href="https://github.com/NatLabRockies/MODAQ2" target="_blank">MODAQ2</a>. For discussion on design decisions and details on technical aspects of the software design, please see the Technical Reference page.
 
 ### Introduction
-M2 has been designed around the ROS2 ecosystem of libraries and tools to provide users a well established way of developing a data acquisition system suitable for their project. ROS2 was selected because it is easy to learn, has a robust support community, completely free and open-source, supports multiple programming languages, and is reliable for long term use in industrial settings. There is also a plethora of existing ROS packages that users can leverage in addition to the packages developed for MODAQ 2.
+M2 leverages the ROS2 ecosystem of libraries and tools to provide a well established way of developing a data acquisition system suitable for a variety of projects. ROS2 was selected because it is easy to learn, has a robust support community, completely free and open-source, supports multiple programming languages, and is reliable for long term use in industrial settings. There is also a plethora of existing ROS packages that users can leverage in addition to the packages we developed for MODAQ 2.
 
 The MODAQ 2 project is an amalgamation of ROS packages, tools, and guidance for developing data acquisition and control applications for marine energy devices using a ROS based architecture. The MODAQ 2 Reference Design includes several packages that are targeted for laboratory and field applications and allow most developers with a basic background in programming to spin up a high-quality DAQ and control system. While we say 'for marine energy devices', that points to M2's origin (and some of its instrument support) and not necessary its exclusive domain. M2 can be used in a wide variety of applications that need a performant and reliable data acquisition solution.  
 
@@ -11,7 +11,7 @@ The main software aspects of MODAQ 2 are as follows:
 - Ubuntu Linux Operating System
 - RO2 Humble Hawksbill (or Jazzy Jalisco for Arm64)
 - Community Developed ROS Packages
-- NRL Custom Developed ROS Packages
+- NLR Custom Developed ROS Packages
 - Third Party DAQ Driver libraries
 
 ## Ubuntu Operating System

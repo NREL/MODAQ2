@@ -9,7 +9,7 @@ This section discusses the hardware supported by M2 and presents a reference des
 ## Hardware Reference Design
 The purpose of providing this reference design is to offer a functional demonstration of the M2 platform. This hardware, along with the instructions in the [Software](software.md) section that follow, should yield the DIY user a properly functioning M2 build. Users seeking an "out of the box" experience, might consider our [M2GO](m2go.md) hardware loan program.
 
-Since each project tends to be unique and measurement objectives can vary considerably, there is no typical configuration that will satisfy all situations. However, there's usually significant overlap in base functionality that is common in most MODAQ projects, such as: measuring analog signals, motions, position, and temperatures. 
+Since each project tends to be unique and measurement objectives can vary considerably, there is no typical configuration that will satisfy all situations. However, there's usually significant overlap in base functionality that is common in most MODAQ projects, such as: measuring analog signals, motions, position, and temperatures. Advanced users can start with the RD and build upon it to create the necessary functionality- that's what we do.  
 
 The following is a diagram of the M2 Reference Design:
 
@@ -146,6 +146,7 @@ These provide the following capabilities:
 - Logic level digital input and output (also known as TTL or DIO)
 - Position, heading, velocity, acceleration, rotation, and orientation
 - IEEE-1588v2 PTP time server
+- Temperature measurements using PT100 or PT1000 RTD sensors
 
 !!! note
 
@@ -166,7 +167,7 @@ Some highlights:
 - Available option for 14-bit ±10 VDC digital to analog (DAC) output
 - Available option for 4-20 mA current loop input
 
-The Reference design includes nodes to stream the ADC channels at up to 40 kHz or read the channels on demand. It also includes nodes to command an output voltage to the DAC module and read/write to the DIO. 
+The Reference design includes M2 software nodes to stream the ADC channels at up to 40 kHz or read the channels on demand. It also includes nodes to command an output voltage to the DAC module and read/write to the DIO. 
 
 ### BrainBoxes ED-582
 ![ED-582](img/ed582.png#right)
