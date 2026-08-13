@@ -6,11 +6,11 @@ nav:
   - Versions: 'versions.md'
   - Hardware: 'hardware.md'
   - Software: 'software.md'
+  - M2 Code Repository: 'github.md'
   - M2GO: 'm2go.md'
-  - Github: 'github.md'
-  - Technical Reference: 'techref.md'
   - HMI: 'hmi.md'
   - Configurator: 'configurator.md'
+  - Technical Reference: 'techref.md'
   - Q&A: 'qa.md'
   - Useful Links: 'links.md'
 markdown_extensions:

@@ -162,6 +162,7 @@ The LabJack T8 provides a lot of useful I/O in a single highly performant ethern
 Some highlights:
 
 - 8 simultaneous sampling 24-bit analog to digital converters (ADC), with channel-to-channel isolation and sampling up to 40 kHz
+- ADC is delta-sigma (Texas Instruments <a href="https://www.ti.com/lit/ds/symlink/ads131a04.pdf" target="_blank">ADS131A02</a>)
 - Up to 20 channels of digital I/O (DIO)
 - USB or ethernet connectivity- can also be powered by USB or PoE
 - Available option for 14-bit ±10 VDC digital to analog (DAC) output

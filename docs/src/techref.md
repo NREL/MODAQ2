@@ -203,6 +203,33 @@ The promise of PTP is that all connected PTP-aware devices will be synchronized 
 
 Where the real power of PTP is realized is in synchronizing samples taken by disparate systems. These can be DAQs on the same subnet, sharing the same master clock or systems completely disconnected from each other and separated miles apart. As long as each system is disciplined to a healthy PTP reference clock, the samples will be synchronized to the aforementioned nanosecond time precision. This is a boon for distributed architectures and system design flexibility, allowing multi-controller synchronization without physical interconnections. 
 
+!!! note "Does Your Controller Support PTP?"
+    The controllers discussed in the [Hardware](hardware.md#controller-options-that-have-been-evaluated-for-m2) section all support PTP. The ethernet port(s) on your controller must have hardware timestamping for PTP to work. To verify PTP support:
+
+    1. Find the **logical name** of the ethernet port using `lshw -class network` in the command line. it will be something like **eth0** or **enp3s0**.
+    2. `ethtool -T <port logical name>`
+
+        ```zsh
+        modaq@modaq-ODYSSEY-X86J4125:~/M2-Dev$ ethtool -T enp3s0
+            Time stamping parameters for enp3s0:
+            Capabilities:
+                    hardware-transmit
+                    software-transmit
+                    hardware-receive
+                    software-receive
+                    software-system-clock
+                    hardware-raw-clock
+            PTP Hardware Clock: 1
+            Hardware Transmit Timestamp Modes:
+                    off
+                    on
+            Hardware Receive Filter Modes:
+                    none
+                    all
+        ```
+
+    3. The important values are **hardware-transmit** and **hardware-receive**. If neither of these (or both) do not appear, then PTP hardware support is not available. If **software-transmit** and **software-receive** appear (without hardware-transmit and hardware-receive), then PTP is possible, albeit degraded (sub-millisecond accuracy, higher jitter). 
+
 In our experience, PTP implementation either works magically or is a real bear. It does help to have some knowledge of networking and configuring managed switches. PTP requires the following for optimal performance:
 
 1. PTP time server
@@ -464,19 +491,21 @@ plt.show()
 ```
 
 ## ADCs
-While there's an abundance of really good analog to digital converters (ADCs) on the market, one of our biggest challenges was finding one suitable for our requirements. 
+While there's an abundance of really good analog to digital converters (ADCs) on the market, one of our biggest challenges was finding one suitable for our requirements, which are driven by the needs of conducting power quality and power performance assessments of the power take off system on marine energy devices per IEC TS 62600-(30, 100, 200). 
 
 - 24 bit
 - Simultaneous sampling
 - At least 4 channels
 - Channel-to-channel isolation
+- ±10 volt input range
 - Anti-aliasing filter
 - Not dependent on a particular vendor's controller (i.e. non-proprietary)
 - Ready to go, with simple ethernet or USB interfacing
-- Works with linux
+- linux drivers, API, or library
 
+This admittedly is a bit of a unicorn and devices we've found generally fall short on one or more of the above requirements. The Labjack T8 that we feature in this reference design comes the closest, but lacks a dedicated anti-aliasing filter. This is mitigated to some degree by selecting high sample rates (the T8 can sample to 40 kHz) and with the inherent filtering by the delta-sigma method in the T8's ADC. Further, a simple RC stage (<a href="https://www.electronics-tutorials.ws/filter/filter_2.html" target="_blank">low-pass filter</a>) can be added at the analog inputs to attenuate high frequencies before the signal gets digitized. 
 
-
+Another important consideration is measurement simultaneity. Many (cheaper) multichannel ADC interfaces may have only one ADC and the input channels are sampled sequentially. These devices use a multiplexer circuit to rapidly cycle through the requested channels, so there's a small delay between when each measurement is actually made. The T8 contains eight separate ADCs that can sample the input channels simultaneously, which can be important for analyzing multichannel signals. 
 
 ## 4-20 mA Current Loops
 One or more of the 8 analog inputs available on the RD could be allocated for measuring outputs from devices that signal using a current loop. The 4-20 mA current loop would be converted to 1-5 volts using a 250 Ω (or 2-10 VDC using a 500 Ω) precision shunt resistor connected across the positive and negative input terminals of the voltage channel. 

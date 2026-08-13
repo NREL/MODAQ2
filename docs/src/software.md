@@ -133,7 +133,7 @@ sudo apt install ros-humble-desktop ros-dev-tools ros-humble-rosbag2 ros-humble-
 ```
 
 ## Cloning the M2 Code Repository
-Follow the instructions described in [M2 Github](github.md).
+Follow the instructions described in [M2 Code Repository](github.md).
 
 ## Brief Description of the M2 RD Features and Functions
 The M2 RD (and M2GO) 'ships' with several capabilities and I/O support from the larger M2 codebase. We chose to limit the RD to basic, core functions that are common across most M2 builds as a useful technology demonstration. If a needed feature or input device is not found in the RD, chances are, it's available in the full code. <a href="https://www.nlr.gov/water/modaq" target="_blank">Contact</a> the development team for more information. 
