@@ -24,15 +24,17 @@ The M2 Reference Design includes the following nodes. Click on the item to expan
 </details>
 <details>
     <summary>Node: bag_recorder_node</summary>
-    <br>Node description<br><br>
+    <br>Subscribes to one or more (or all) topics published by the M2 system and records the data to a bag file. File duration specifies how many minutes to allow a bag file to grow before closing and starting a new file. Logged topics would be a comma-separated list of topics to save to the bag file, or "*" (including the quotes) to log all published topics.<br><br>
     <b>Package: </b>bag_recorder<br>
     <b>Alias: </b>N/A<br>
     <b>Configuration Parameters: </b>
     <ul>
-    <li>IP address</li>
+    <li>data folder</li>
+    <li>file duration</li>
+    <li>logged topics</li>
     </ul>
     <b>Publishers: </b>/system_messenger<br>
-    <b>Subscriptions: </b>/system_messenger, /ain, /do, /din, /rtd, /bag_control<br>
+    <b>Subscriptions: </b>/system_messenger, /bag_control<br>
 </details>
 <details>
     <summary>Node: labjack_ain_reader</summary>
@@ -348,12 +350,7 @@ Open a  terminal window in that folder and type: `sudo nano phc2sys.service` to 
 === "Intel"
     ```zsh
     Edit the Execstart line to: 
-    Execstart=/usr/sbin/phc2sys -w -s enp2s0 -u 5
-
-    Save and exit nano. 
-    enp2s0 should be the ethernet port connected to the subnet with the master clock
-    -u 5 writes to the syslog every 5 seconds, you can change this for more or less 
-    logging as desired. 
+    Execstart=/usr/sbin/phc2sys -w -s enp2s0 -u 60
     ``` 
 === "RPi CM5"
     ```zsh
@@ -369,11 +366,14 @@ Open a  terminal window in that folder and type: `sudo nano phc2sys.service` to 
     
     [Service]
     Type=simple
-    ExecStart=/usr/sbin/phc2sys -w -s eth0 -c CLOCK_REALTIME -u 300
+    ExecStart=/usr/sbin/phc2sys -w -s eth0 -c CLOCK_REALTIME -u 60
     
     [Install]
     WantedBy=multi-user.target
     ```
+Save and exit nano. 
+
+enp2s0 (or eth0) in the above example should be the ethernet port connected to the subnet with the master clock -u 60 writes to the syslog every 60 seconds, you can change this for more or less logging as desired. 
 
 To start the service: `sudo systemctl start phc2sys`
 
@@ -384,7 +384,7 @@ To enable the phc2sys service to start at boot: `sudo systemctl enable phc2sys`
 To disable the phc2sys service starting at boot: `sudo systemctl disable phc2sys`
 
 !!! warning "Troubleshooting"
-    The instructions above edits the ptp4l.service and phc2sys.service in locations that could get overridden by a software update. It may be necessary to use a 'drop-in' .conf file to override desired settings. This file will live in `/etc/systemd/system/<serviceName>.d/override.conf`, where <serviceName> would be either ptp4l.service or phc2sys.service, depending on which you're editing. The actual filename of the override file does not matter, as long as it lives in this folder and has the .conf extension. These steps may also be necessary if the services launch fine, but don't appear to be using the settings you configured.
+    The instructions above edits the ptp4l.service and phc2sys.service in locations that could get overridden by a software update. It may be necessary to use a 'drop-in' .conf file to override desired settings. This file will live in `/etc/systemd/system/<serviceName>.d/override.conf`, where `<serviceName>` would be either ptp4l.service or phc2sys.service, depending on which you're editing. The actual filename of the override file does not matter, as long as it lives in this folder and has the .conf extension. These steps may also be necessary if the services launch fine, but don't appear to be using the settings you configured.
 
     The contents of the ptp4l.service.d/override.conf would like like this:
     === "Intel"
@@ -405,16 +405,16 @@ To disable the phc2sys service starting at boot: `sudo systemctl disable phc2sys
         ```zsh
         [Service]
         Execstart=
-        Execstart=/usr/sbin/phc2sys -w -s enp2s0 -u 5
+        Execstart=/usr/sbin/phc2sys -w -s enp2s0 -u 60
         ```
     === "RPi CM5"
         ```zsh
         [Service]
         Execstart=
-        Execstart=/usr/sbin/phc2sys -w -s eth0 -u 5
+        Execstart=/usr/sbin/phc2sys -w -s eth0 -u 60
         ```
 
-    NOTE: the blank Execstart= serves to clear or reset the value placed by the original service file that is being overridden. 
+    NOTE: the blank Execstart= serves to clear or reset the value placed by the original service file that is being overridden. The value after -s should be the desired ethernet port.  
 
 
 ## Parsing MCAP Files
@@ -490,8 +490,10 @@ plt.plot(np.array(dt_ros)[100::])
 plt.show()
 ```
 
+Alternatively, we've developed the <a href="https://github.com/MODAQ2/MODAQ_toolkit/tree/main" target="_blank">MODAQ Toolkit</a> in python to convert the MCAP files to the Parquet data format, which is more compatible with analytic environments including python and MATLAB.
+
 ## ADCs
-While there's an abundance of really good analog to digital converters (ADCs) on the market, one of our biggest challenges was finding one suitable for our requirements, which are driven by the needs of conducting power quality and power performance assessments of the power take off system on marine energy devices per IEC TS 62600-(30, 100, 200). 
+While there's an abundance of really good analog to digital converters (ADCs) on the market, one of our biggest challenges was finding one suitable for our requirements, which are driven by the needs of conducting power quality and power performance assessments of the power take off system on marine energy devices per IEC TS 62600-(30, 100, 200). Our ideal ADC interface would have the following attributes:
 
 - 24 bit
 - Simultaneous sampling

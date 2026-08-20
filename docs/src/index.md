@@ -1,5 +1,5 @@
 # MODAQ 2 Reference Design
-<img align="center" src="img/MODAQ_Logo2.png">
+<img align="center" src="img/MODAQ_Logo4.png">
 
 !!! note
     These documents are still under development. Please contact the open-water testing support team at NLR for more information. <a href="https://www.nlr.gov/water/modaq" target="_blank">Contact Us</a>

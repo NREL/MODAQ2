@@ -37,7 +37,26 @@ M2GO is a fully built, configured, functional, and tested manifestation of the M
 ## Do I need to know programming to use MODAQ?
 
 ## Which sensors or instruments should I use? 
-If you have to ask...
+This is a difficult question to answer, since it depends on a number of factors including measurement objectives, range of value(s) to be measured, quality of measurements, and more. Before actually shopping for devices, it's best to consider the following questions:
+
+**What am I trying to measure?** This might sound like an obvious question, but often the first step is define the measurement objective and deconstruct what is needed to satisfy it. Perhaps that leads to measuring the pressure in a pipe. M2 cannot measure pressure directly, but it can measure voltages in the range of ±10vdc. Therefore a pressure sensor is needed that converts the pipe pressure to a ±10vdc signal. The voltage measured by M2 is then scaled to give the result as pressure in the desired units (PSI, ATM, Pa, etc). 
+
+**What are the measuring range I need?** Sensors and instruments should be selected so that they cover the expected variance in the property under measure, with some safety margin. A device with a smaller range than necessary may clip the measurement or get damaged. A device with too broad a range may not be able to capture the variance of the property with sufficient precision. If, for example, you're measuring pressure in a pipe that's expected to range from 0-350 PSI, a pressure sensor with a range of 0-500 PSI might be the right choice, since it has some overhead available for unexpected pressure spikes. 
+
+**What's the appropriate sampling strategy necessary to capture data useful for my purpose(s)?** Sampling strategy covers a range considerations, including sample rate, bit depth/resolution, and filtering. Selection of such should be governed by the measurement objectives 
+
+**What associated factors do I need to consider?** Often the environment where the sensor will be placed needs to be considered. Can the device withstand expected temperatures? Shock, vibration, UV exposure? Will it be submerged or exposed to precipitation? What about dust, sand, grit, or suspended solids in water? If you're measuring flow or temperature within a pipe, perhaps the sensor can adequately cover the measurement range of those values, but can it withstand the pressure from the fluid in the pipe? 
+
+**How will these measurements be used?** Again, a seemingly obvious question, but if the measurements are to support accredited testing or likely to face scrutiny, then that sets the bar to a certain level. Perhaps the measurements will be used as in input to a model or for model validation- input from the modeling team may be necessary to focus on the appropriate measurements.
+
+**What quality of measurements is 'good enough'?** 
+
+**What about signaling?** The device will have a signaling method that requires an appropriate interface on your MODAQ system. This may be ±10vdc analog signal, RS232 serial, 4-20 mA current loop, or other. Often devices are available with a choice of signaling methods. It's recommended to prioritize a method that matches available I/O ports on your equipment and that don't require additional code development to acquire and process. For example, consider an encoder for measuring rotary or linear position. Some encoders give you <a href="https://novanta.com/robotics-automation/product/midi-incoder-inductive-angle-encoder/" target="_blank">dozens of options</a> for the signaling. Selecting the wrong one could require the purchase of an expensive interface and extra coding effort. For a simpler example, a pressure sensor may be available in with either ±10vdc or 4-20 mA output. Either choice is natively supported by the M2 Reference Design and M2GO, however the 4-20 mA might be the better choice since it's less susceptible to noise, but it requires a shunt resistor and possibly an excitation source (see ths [discussion](techref.md#4-20-ma-current-loops)) 
+
+**Can I supply the device with its required power?**
+
+**What's your budget?**
+
 
 ## Can NLR help configure or customize MODAQ?
 
