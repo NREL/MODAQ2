@@ -9,7 +9,7 @@ The MODAQ 2 project is an amalgamation of ROS packages, tools, and guidance for 
 The main software aspects of MODAQ 2 are as follows:
 
 - Ubuntu Linux Operating System
-- RO2 Humble Hawksbill (or Jazzy Jalisco for Arm64)
+- ROS2 Humble Hawksbill (or Jazzy Jalisco for Arm64)
 - Community Developed ROS Packages
 - NLR Custom Developed ROS Packages
 - Third Party DAQ Driver libraries
@@ -243,9 +243,9 @@ The logger processes `/system_messenger` messages that have the log switch turne
 A rate-limiting feature called the "snoozer" can be enabled in messages posted to `/system_messenger` to prevent flooding the log with repeated message occurrences. This will suppress duplicate message writes over the selected time interval. For instance, if a 100 Hz loop encounters an error that publishes to `/system_messenger`, the snoozer will prevent 99 duplicate messages per second from getting written to the system log. If the messages continue after the snoozer expires (e,g. the error condition persists), the snoozer will allow another write of that message to the system log and then snooze again for the set interval time.
 
 #### Emailer
-The emailer processes `/system_messenger` messages that have the email switch turned on and sends and email with smtp which contains the important information in a human readable format. For this to work, you must have an email with smtp enabled - this is possible with a free gmail account.
+The emailer processes `/system_messenger` messages that have the email switch turned on and sends an email with smtp which contains the important information in a human readable format. For this to work, you must have an email with smtp enabled - this is possible with a free gmail account.
 
-Up to two distribution lists are support in this release of the Emailer and those lists can be populated in the config file. Each list can contain one or more email addresses, however there's going to be a lengthy list of recipients, it's suggested to create a group (using something like google groups) so that the logger only sends out one email and that gets distributed to the group.
+Up to two distribution lists are support in this release of the Emailer and those lists can be populated in the config file. Each list can contain one or more email addresses, however, if there's going to be a lengthy list of recipients, it's suggested to create a group (using something like google groups) so that the logger only sends out one email and that gets distributed to the group.
 
 Distribution list 1 is always enabled if emailing is selected for the alert topic. If distribution list 2 is enabled, both list 1 and list 2 will receive the message. Best practice for this system is list 1 is used for developers or maintainers to receive critical or diagnostic system related messages, while list 2 is would be used for more general status updates.
 
@@ -259,9 +259,9 @@ This feature is still under development. The goal is to develop a process that m
 The labjack_t8_ros2 package was developed specifically for use in MODAQ 2. This packages relies on a third party driver to interface with the Labjack T8.
 
 #### Labjack LJM Library
-MODAQ 2 Reference Design includes the Labjack T8 to make high-speed measurements up to 40 kHz. We have provided the labjack_t8_ros2 package to connected to T8 devices and stream data to M2 so it can be acted upon with control rules and/or logged as measurement data for post-processing and analysis. To use the labjack_t8_ros2 package, the Labjack LJM library needs to be installed on your controller.
+MODAQ 2 Reference Design includes the Labjack T8 to make high-speed measurements up to 40 kHz. We have provided the labjack_t8_ros2 package to connect to T8 devices and stream data to M2 so it can be acted upon with control rules and/or logged as measurement data for post-processing and analysis. To use the labjack_t8_ros2 package, the Labjack LJM library needs to be installed on your controller.
 
-The instructions for installing this library are in {MODAQ 2 Repo}/src/labjack_t8_ros2/README.md
+The instructions for installing this library are found in the `INSTALL.md` contained in the installer zip package (<a href="https://files.labjack.com/installers/LJM/Linux/x64/release/" target="_blank">x64</a>, <a href="https://files.labjack.com/installers/LJM/Linux/AArch64/release/" target="_blank">Arm</a>) or on the Labjack website (<a href="https://support.labjack.com/docs/ljm-software-installer-linux-x64" target="_blank">x64</a>, <a href="https://support.labjack.com/docs/ljm-software-installer-linux-arm-family" target="_blank">Arm</a>)
 
 ### M2 Control
 Currently the m2_control package just handles the interactions between the system and the HMI. The ROS2 ecosystem is well suited for more advanced control operations. A simple control algorithm could be implemented by creating a subscriber for the control rule input (i.e. the measurement of a battery voltage) with a callback class function. In the callback function, you could implement your algorithm (i.e. if voltage is too low, turn off a pump). The control could be actuated by then publishing a command to a digital output to turn something on or off (i.e. turning off the pump).

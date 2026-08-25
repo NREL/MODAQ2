@@ -28,8 +28,6 @@ The intent here is not to bash on NI or LabVIEW, but rather to point out some of
 
 ## M2 Goals and Design Requirements
 
-There is little point to developing a new system without first establishing some overarching goals. Much of this can be gleaned from the previous motivation section, but here we explicitly state the goals we're trying to achieve with M2. 
-
 The primary goals of MODAQ 2 are to:
 
 - Develop hardware and software architectures that can adapt to a wide range of missions and use-cases

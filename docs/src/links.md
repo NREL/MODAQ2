@@ -49,6 +49,6 @@ Installing Ubuntu 22.04 (x86_64, AMD64): <a href="https://ubuntu.com/tutorials/i
 
 ## Git and Github
 - </a>Managing personal access tokens: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens" target="_blank">managing-your-personal-access-tokens</a>
-- </a>Forking a github repo: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo" target="_blank">fork-a-repo</a>
+- </a>Forking a Github repo: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo" target="_blank">fork-a-repo</a>
 - </a>Using git submodules for modularity in versioning: <a href="https://github.blog/open-source/git/working-with-submodules/" target="_blank">working-with-submodules</a>
 - </a>Creating a pull request with a forked repo: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork" target="_blank">creating-a-pull-request-from-a-fork</a>

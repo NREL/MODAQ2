@@ -165,7 +165,7 @@ Some highlights:
 - ADC is delta-sigma (Texas Instruments <a href="https://www.ti.com/lit/ds/symlink/ads131a04.pdf" target="_blank">ADS131A02</a>)
 - Up to 20 channels of digital I/O (DIO)
 - USB or ethernet connectivity- can also be powered by USB or PoE
-- Available option for 14-bit ±10 VDC digital to analog (DAC) output
+- Available option for 14-bit, ±10 VDC digital to analog (DAC) output
 - Available option for 4-20 mA current loop input
 
 The Reference design includes M2 software nodes to stream the ADC channels at up to 40 kHz or read the channels on demand. It also includes nodes to command an output voltage to the DAC module and read/write to the DIO. 
@@ -187,7 +187,7 @@ This device uses a sensor fusion engine to develop 3D orientation solutions usin
 
 The M2 reference design includes support for the <a href="https://www.advancednavigation.com/inertial-navigation-systems/satellite-compass/gnss-compass/" target="_blank">GNSS Compass</a> from Advanced Navigation. This ethernet connected, PoE powered device includes a GNSS satellite receiver with RTK support, built-in dual antennas, and a PTP time server. 
 
-This device is a compliment to the Xsens Mti-G-710, since the GNSS Compass, with it's dual antennas can provide a superior heading estimate and with an RTK correction signal available, can provide can provide superior positioning estimates. In addition, it can provide an estimate of heave and provides a highly accurate time reference for the M2 system. 
+This device is a complement to the Xsens Mti-G-710, since the GNSS Compass, with its dual antennas can provide a superior heading estimate and with an RTK correction signal available, can provide superior positioning estimates. In addition, it can provide an estimate of heave and provides a highly accurate time reference for the M2 system. 
 
 ### Networking
 We purposely designed the RD with simple, basic networking. On the plus side, this is cheap and requires no special configuration. It's also sufficiently fast for the selected components. However, in more elaborate builds, especially those with multiple PTP capable devices, a managed switch with PTP support will be more desirable. 

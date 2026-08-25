@@ -25,23 +25,35 @@
   font-weight: 700;
 }
 
-/* Content body scope */
-.md-content {
-  /* unvisited link */
-  a:link {
+/* dark mode link colors */
+[data-md-color-scheme="slate"] .md-content a:link {
+    color: #7CC4FF;
+    /* color: #6FC2FF; */
+  }
+
+  [data-md-color-scheme="slate"] .md-content a:visited {
+    color: #B88CFF;
+    /* color: #8EA2FF; */
+  }
+
+  [data-md-color-scheme="slate"] .md-content a:hover {
+    color: #ffd166;
+  }
+
+/* light mode link colors */
+[data-md-color-scheme="default"] .md-content a:link {
     color: #0079c2;
   }
 
-  /* visited link */
-  a:visited {
+  [data-md-color-scheme="default"] .md-content a:visited {
     color: #003A69;
   }
 
-  /* mouse over link */
-  a:hover {
+  [data-md-color-scheme="default"] .md-content a:hover {
     color: #DB9728;
   }
-}
+
+
 
 /*.md-grid {
     max-width: 97%;
@@ -86,13 +98,11 @@ ul li {
 }
 
 /* FIXME (size/appearance and dark mode): Add an icon to links that open in a new tab */
+/* 
 a[target="_blank"]::after {
   content: url(../img/new-tab-icon-20.png);
   display: inline-block;
   margin-left: 0.1em;
   margin-right: 0.1em;
   transform: scale(0.65);
-  /*width: 1em;
-  height: 1em; */
-}
- 
+}*/

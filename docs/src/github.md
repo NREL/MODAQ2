@@ -5,7 +5,7 @@ This section will discuss the layout of the MODAQ 2 codebase on Github.
 Because MODAQ 2 is designed to be modular, it was laid out using an organization in Github which can be found at this link:  <a href="https://github.com/MODAQ2" target="_blank">MODAQ2</a>. This enables the ability to clone or copy the necessary modules for your specific implementation of MODAQ 2. The main reason of taking this approach to software organization is to streamline the set up of a new system and streamline contributing to the open-source MODAQ 2 project.
 
 ## Building a MODAQ 2 System
-It is recommended to utilize git and Github/Gitlab for building a MODAQ 2 system to efficiently track changes and maintain version control. We recommend initializing a new repo on your Github account and brining in the necessary modules for your project. You can also add any modules you may need that currently aren't available from the MODAQ2 organization. These are the steps to do this:
+It is recommended to utilize git and Github/Gitlab for building a MODAQ 2 system to efficiently track changes and maintain version control. We recommend initializing a new repo on your Github account and bringing in the necessary modules for your project. You can also add any modules you may need that currently aren't available from the MODAQ2 organization. These are the steps to do this:
 
 1. Login or make an account on github.com   
 2. Make a new repository on your account - we recommend including the ROS .gitignore template

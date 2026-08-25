@@ -30,7 +30,7 @@ if you mouse over the image above, reference numbers appear next to the GUI elem
 4. Node selection pane. A node is an M2 software module containing configurable items that is launched as part of functional M2 system. (see: [ROS2 Nodes](techref.md#ros2-nodes))
 5. Selection dropdown for available nodes that can be added to the configuration.
 6. Window showing nodes that have been added to the configuration. If an existing  configuration was loaded, the nodes in that file will populate here. On a new configuration, this window will be empty until nodes are added from the dropdown box (5).
-7. Rename the selected node. Please see section XXX for node naming guidance.
+7. Rename the selected node. Please see the [Known Issues](configurator.md#known-issues) section for cautions when renaming items.
 8. Delete the selected node. Use with caution: there is no undo for this.
 9. Configuration pane
 10. Window for viewing and editing configuration values.
@@ -38,7 +38,7 @@ if you mouse over the image above, reference numbers appear next to the GUI elem
 12. Example of the expanded view for parameters with multiple values. These can be edited or deleted individually. New values can be inserted (up to limits specified in the schema).
 13. Delete Selection button: this will delete the highlighted parameter and value. There is no undo.
 14. Insert Here button: On Parameters with multiple values, a new value can be inserted at the highlighted location. NOTE: new parameters cannot be added, only new values for existing multi-value parameters. 
-15. Message Box: Helpful test will appear here as the user clicks on elements in the Configuration pane. 
+15. Message Box: Helpful text will appear here as the user clicks on elements in the Configuration pane. 
 
 ## Getting Started
 
@@ -78,7 +78,7 @@ Select the **Add Node** dropdown box (5) and select a node to add to the configu
 
 !!! Warning
     
-    Do not add two or more of the same node type without first renaming the node after it it added. For instance, if you want add two LabJackAIN nodes, add one to the listbox, then highlight it and rename it. Then add the second. Failure to do this will cause unpredictable results- but usually you'll just have 2 entries in the Node List for the same node (they won't be unique- even if renamed later). 
+    Do not add two or more of the same node type without first renaming the node after it is added. For instance, if you want add two LabJackAIN nodes, add one to the listbox, then highlight it and rename it. Then add the second. Failure to do this will cause unpredictable results- but usually you'll just have 2 entries in the Node List for the same node (they won't be unique- even if renamed later). 
 
 #### Viewing and Editing the Configuration
 Selecting any node that appears in the listbox (6) so that it is highlighted will result in its associated Parameters and Values (key/value pairs) being displayed in the Configuration Values (10) window. 

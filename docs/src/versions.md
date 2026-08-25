@@ -12,11 +12,9 @@
   </div>
 </div>
 <p />
-The MODAQ 2 codebase has been developed to operate on controllers with either x86_64 (Intel/AMD64) or ARM64 CPU architectures. Initially we assumed there would be enough differences in these architectures to require developing and maintaining a codebase for each. However, the differences were few and easily addressed 
-in the code. To keep things simple, there is a single unified version of the M2 software that supports 
-both Intel and Arm architectures. 
+The MODAQ 2 codebase has been developed to operate on controllers with either x86_64 (Intel/AMD64) or ARM64 CPU architectures. Initially we assumed there would be enough differences in these architectures to require developing and maintaining a codebase for each. However, the differences were few and easily addressed in the code. To keep things simple, there is a single unified version of the M2 software that supports both Intel and Arm architectures. 
 
-In the following Hardware and Software sections, guidance is provided on these topics:
+In the following [Hardware](hardware.md) and [Software](software.md) sections, guidance is provided on these topics:
 
 1. Controller selection
 2. Sensor and Instrument support
@@ -24,6 +22,9 @@ In the following Hardware and Software sections, guidance is provided on these t
 4. Operating system selection
 5. Getting up and running with the ROS2 environment
 6. M2 reference design software nodes and their usage
+
+## Scaling M2 Designs
+M2 easily scales from small, low powered designs to large, high-performance distributed systems using the same M2 codebase. The following sections outline a Reference Design for a performant mid-tier MODAQ system, however the controller could be upgraded or downgraded to dial in the desired level of performance, size, and power consumption. Additional I/O modules can be added for more sensors or instruments as measurement needs evolve. Multiple M2s could be used in a distributed design that could each share data in near-real-time or synchronized later in post-processing using precision timestamped data. 
 
 ## M2GO
 [M2GO](m2go.md) is a prebuilt and pre-configured version of the M2 reference design using an Intel-based controller 

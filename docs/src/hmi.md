@@ -60,7 +60,7 @@ Since the config and content folders live in root, permissions will be necessary
 
 #### Set User Permissions to nginx Web Page Folder
 
-While this is optional, it will make life easier during the dev process to add user permissions to thw `/var/www/modaq_hmi` folder. Otherwise, every single change will require sudo privilege escalation.  
+While this is optional, it will make life easier during the dev process to add user permissions to the `/var/www/modaq_hmi` folder. Otherwise, every single change will require sudo privilege escalation.  
 
 This sets the local user 'modaq' with rwx privileges in the modaq_hmi folder recursively:
 
@@ -104,7 +104,7 @@ server {
 A couple of notes about this configuration: 
 
 1. This configuration is for an unsecured connection (i.e. not https://) and is probably safe for the private subnet which serves this HMI. However, the commented section on `SSL configuration` could be enabled to provide secure connections- if certificate dependencies are met. Some web browsers might complain about connecting to the HMI citing that the connection is unsecure and potentially dangerous if SSL is not enabled. It may be necessary to click through some warnings or whitelist the site. 
-2. The entry for `server_name` was an attempt allow users to type modaq.hmi into their browser instead of having to know the IP address of the controller. While that would be convenient, more work needs to be done to get it working, so we backburnered this for other priorities. 
+2. The entry for `server_name` was an attempt to allow users to type modaq.hmi into their browser instead of having to know the IP address of the controller. While that would be convenient, more work needs to be done to get it working, so we backburnered this for other priorities. 
 
 #### Ubuntu Firewall Rules
 If the Ubuntu firewall (`ufw`) is enabled on the controller, it may be necessary to create a firewall rule to allow nginx to access the network. This is done with a simple terminal command:
@@ -112,6 +112,8 @@ If the Ubuntu firewall (`ufw`) is enabled on the controller, it may be necessary
 ```
 sudo ufw allow 'Nginx HTTP'
 ```
+NOTE: the N in Nginx capitalization is not an error.
+
 
 ## ROSBridge Server
 The primary mechanism providing connectivity between ROS2 nodes running on M2 and the nginx web server is a websocket that is managed through rosbridge and roslibjs. Rosbridge is the service running along with M2 ROS2 nodes and exposes all published topics to a websocket.
@@ -250,7 +252,7 @@ with the selected attributes. The streaming plugin (basically) creates a fifo bu
 
 The architecture of the HMI web stack purposely places the computational burden of chart composition and rendering on the web client (i.e. your browser) not the M2 controller. Therefore, low-powered computers may struggle with smooth animation if the HMI has a lot of plots and/or the chart history is too big. The example included in this repo updates the chart at 1 Hz and displays up to 1 minute of data history. The update rate and history depth can be adjusted to preference.
 
-chart.js breaks up the chart composition into 3 blocks: setup, config, and render. The setup block defines the y-axis datasets, labels, and plot trace attributes. The config block expands on this by defining additional attributes and binding the dataset(s) to an object that gets rendered in the render block. This all expects the data to formatted as an array, however our data are constructed into objects. 
+chart.js breaks up the chart composition into 3 blocks: setup, config, and render. The setup block defines the y-axis datasets, labels, and plot trace attributes. The config block expands on this by defining additional attributes and binding the dataset(s) to an object that gets rendered in the render block. This all expects the data to be formatted as an array, however our data are constructed into objects. 
 
 To overcome this, we define a object literal to map the y-axis label(s) to the label used to identify the desired element in the data object (example for the accelerometer data). 
 
