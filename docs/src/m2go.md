@@ -1,3 +1,5 @@
+# M2GO ![M2GO](img/m2_icon.png#right)
+
 M2GO is a physical representation of the M2 Reference Design discussed in the previous sections. It comes preconfigured, tested, and ready to go. 
 
 ## What Can M2GO Do?

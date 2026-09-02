@@ -31,14 +31,14 @@ Frontend:
 
 !!! note
 
-    The code uses offline bundled versions of each of these libraries, which allows the HMI to operate without needing to have an active internet connection for dynamically loading the libraries from a Content Delivery Network (CDN). Because of this, the libraries are frozen in time and may not have the latest and greatest features and will lack security updates and bugfixes. At this point, the libraries appear to be sufficiently stable and since the HMI is served on a private subnet, security should not be an issue. It should be cautioned to only use the versions of those libraries that the code was originally written for, since different versions can break stuff.
+    The code uses offline bundled versions of each of these libraries, which allows the HMI to operate without the need to have a persistent internet connection for dynamically loading the libraries from a Content Delivery Network (CDN). Because of this, the libraries are frozen in time and may not have the latest and greatest features and will lack security updates and bugfixes. At this point, the libraries appear to be sufficiently stable and since the HMI is served on a private subnet, security should not be an issue. It should be cautioned to only use the versions of those libraries that the code was originally written for, since different versions can break stuff.
 
     This is admittedly a regression from modern web-stack architecture practices, however we're purposely placing the processing burden on the browser and not the server, since the server in this case is also our DAQ controller. We're prioritizing the M2 data acquisition and control tasks by keeping HMI serving impacts low.
     
 
 ### nginx Configuration
 
-nginx can be install with the following terminal command:
+nginx can be installed with the following terminal command:
 
 ```
 sudo apt install nginx
@@ -74,7 +74,7 @@ It may be necessary to do a chmod afterwards:
 sudo chmod -R 755 /var/www/modaq_hmi
 ```
 
-#### Create nginx Virtual Server Configuration File for HMI
+#### Create nginx Virtual Server Configuration File (Server Block) for HMI
 
 As noted earlier, nginx creates two folders for the server configuration. The `sites-available` folder contains the configurations for one or more websites, while the `sites-enabled` folder contain the configuration(s) for the site(s) that nginx is currently serving. Think of `sites-available` as the parking area and `sites-enabled` as the active/production area. Instead of actually moving or copying the configuration file to the `sites-enabled` folder, nginx expects only a <a href="https://www.geeksforgeeks.org/how-to-symlink-a-file-in-linux/" target="_blank">symbolic link</a> to the file in the `sites-available` folder. The following shows the contents of a configuration file that works for us:
 
@@ -84,7 +84,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    root /var/www;
+    root /var/www/modaq_hmi;
 
     # Add index.php to the list if you are using PHP
     index index.html index.htm;
@@ -112,7 +112,7 @@ If the Ubuntu firewall (`ufw`) is enabled on the controller, it may be necessary
 ```
 sudo ufw allow 'Nginx HTTP'
 ```
-NOTE: the N in Nginx capitalization is not an error.
+NOTE: The capitalization (Nginx HTTP) is not an error.
 
 
 ## ROSBridge Server
@@ -161,11 +161,13 @@ Diving deeper, the parent div is configured with 4 available columns in the incl
 
 #### roslib Subscriber
 
-roslib.js is a javascript library used on the webserver that can subscribe to topics published on M2 and display the data in a webpage. In addition it allows for publication of topics from the webpage as well as using or creating services.
+roslib.js is a javascript library used in the web code that can subscribe to topics published on M2 and display the data in a webpage. In addition it allows for publication of topics from the webpage as well as using or creating services.
 
 First, an object is created to establish the websocket connection to the ROS2 instance on the M2 controller (showing the most relevant code snippet):
 
-`const ros = new ROSLIB.Ros({ url: "ws://localhost:9090" });`[^4]
+`const ros = new ROSLIB.Ros({ url: "ws://localhost:9090" });` 
+
+NOTE: Replace 'localhost' with the IP address of the M2 controller hosting the HMI webpage.
 
 Next, a listener object is created to subscribe to the desired topic being published on the controller. In this example we have a temperature and humidity sensor that is acquired in M2 using MODBUS TCP and the scaled data are published to the `ths` topic. 
 
@@ -243,7 +245,7 @@ In this snippet, if the humidity is >90, the traffic light identified by the tag
 #### Streaming Charts
 We chose chart.js as the charting engine for the M2 HMI, since it's highly customizable, capable, and looks good. It also has great support (both from the developer and user community), which is important, since it can be a little complicated to use. Because of this complexity, this section will not go into detail on its use, but will point out a few details around getting the streaming to work correctly - particularly with multivariate/dual-axis plots. 
 
-chart.js, without the `chartjs-plugin-streaming` plugin, expects to be passed a static numeric array and it renders into a plot
+chart.js, without the `chartjs-plugin-streaming` plugin, expects to be passed a static numeric array that it renders into a plot
 with the selected attributes. The streaming plugin (basically) creates a fifo buffer for the data points and animates them on the x-axis.
 
 !!! tip
@@ -288,6 +290,5 @@ chart.data.datasets.forEach(dataset => {
 
 [^1]: Using the minified version of any of the required JS libraries is totally optional. We prefer minified, since it's a smaller overall payload and can improve performance. The disadvantage to using minified libraries is that all unnecessary whitespace characters are removed, as are comments, and some optimizations may be applied (i.e. variable name shortening), so inspecting or editing the library code can be very difficult- even though it's still in plain text.  
 [^2]: We're using chartjs v3.3.2 since at the time we were creating the HMI there were compatibility issues with the plugin-streaming library on v4 and higher. That may have been resolved in later releases of plugin-streaming. 
-[^3]: Since finding the dependencies as minified libraries in the correct version can be a bit of a pain, here are direct links: <a href="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js" target="_blank">luxon v3.4.40<a/> and <a href="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0" target="_blank">chartjs-adapter-luxon v1.0.0</a>
-[^4]: Replace 'localhost' with the IP address of the M2 controller hosting the HMI webpage. 
+[^3]: Since finding the dependencies as minified libraries in the correct version can be a bit of a pain, here are direct links: <a href="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js" target="_blank">luxon v3.4.40<a/> and <a href="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0" target="_blank">chartjs-adapter-luxon v1.0.0</a> 
 

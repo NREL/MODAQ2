@@ -264,7 +264,9 @@ MODAQ 2 Reference Design includes the Labjack T8 to make high-speed measurements
 The instructions for installing this library are found in the `INSTALL.md` contained in the installer zip package (<a href="https://files.labjack.com/installers/LJM/Linux/x64/release/" target="_blank">x64</a>, <a href="https://files.labjack.com/installers/LJM/Linux/AArch64/release/" target="_blank">Arm</a>) or on the Labjack website (<a href="https://support.labjack.com/docs/ljm-software-installer-linux-x64" target="_blank">x64</a>, <a href="https://support.labjack.com/docs/ljm-software-installer-linux-arm-family" target="_blank">Arm</a>)
 
 ### M2 Control
-Currently the m2_control package just handles the interactions between the system and the HMI. The ROS2 ecosystem is well suited for more advanced control operations. A simple control algorithm could be implemented by creating a subscriber for the control rule input (i.e. the measurement of a battery voltage) with a callback class function. In the callback function, you could implement your algorithm (i.e. if voltage is too low, turn off a pump). The control could be actuated by then publishing a command to a digital output to turn something on or off (i.e. turning off the pump).
+The M2 and ROS2 ecosystem are well suited for simple through advanced control operations. In this reference design, we've included buttons in the HMI to toggle two separate DO (digital output) channels on the Labjack T8 manually as a demonstration. A control algorithm could be implemented in the included `m2_control.cpp` node to perform some automated action based on the value of one of the published parameters. For example, if one of the analog inputs was measuring water level in a tank, control logic could be developed to turn on a pump when the tank reaches a certain level (threshold) and turn it back off when a different threshold is met. This could be expanded to allow an HMI operator to manually control the pump and/or override the automation. 
+
+It's possible to employ state-machines, PID, or more sophisticated methods to achieve the desired level of control. We've developed MODAQ systems with numerous control groups, each containing several individual control rules. In some cases, control rules may have had co-dependencies with other rules or had rule hierarchy- it's possible to create some elaborate control schemes with M2. 
 
 ROS2 also has built in control algorithms that you may find useful despite their main focus being on robot control. See the package <a href="https://control.ros.org/humble/doc/getting_started/getting_started.html" target="_blank">ros2_control</a> to learn about the advanced control options developed for use in ROS2.
 
@@ -272,21 +274,20 @@ ROS2 also has built in control algorithms that you may find useful despite their
 The HMI is described on the [HMI page](hmi.md)
 
 ### Headless Operation
-MODAQ 2 will often need to run headless or automatically start on the boot of the controller. This can be done with linux services.
+MODAQ 2 will often need to run headless (without a monitor) or automatically start on the boot of the controller. This can be done with linux services.
 
-Instructions for putting this in place can be found in {MODAQ 2 Repo}/service/README.md
+Instructions for putting this in place can be found <a href="https://github.com/MODAQ2/m2_core/tree/main/service#modaq-20-setup" target="_blank">here</a>
 
-### Doxygen
-The development of c++ documentation has started and is a work in progress. To view the c++ documentation made using doxygen, navigate to the docs folder and build using the bash command `doxygen`. More information is available in docs/README.md.
-Once built, the doxygen documentation can be viewed on the nginx webserver by opening {M2_Controller_IP}/index.html
 
 ### Precision Time Protocol
-The precision time protocol or IEEE1588v2 or PTPv2 is a protocol used for synchronizing clocks on a network. While this can be done at the software level on the linux kernel, it is recommended to use a hardware implementation for synchronization in the microseconds. To do this, the network interface card (NIC) of your controller must officially support PTP. This can be determined with the model number of the NIC which can be determined with the command `lspci | grep Ethernet` which returns:
+The precision time protocol or IEEE1588v2 or PTPv2 is a protocol used for synchronizing clocks on a network. While this can be done at the software level on the linux kernel, it is recommended to use a hardware implementation for synchronization in the microseconds or better. To do this, the network interface card (NIC) of your controller must officially support PTP. This can be determined by the model number of the NIC which can be found with the command `lspci | grep Ethernet` which returns (for example):
 ```bash
 01:00.0 Ethernet controller: Intel Corporation I210 Gigabit Network Connection (rev 03)
 03:00.0 Ethernet controller: Intel Corporation Ethernet Controller (2) I225-IT (rev 03)
 ```
-Both of these Intel ethernet NICs (I210 and I225) support PTP. We recommend purchasing controllers with Intel NICs as they have the highest reliability when using PTP.
+Both of these Intel ethernet NICs (I210 and I225) support PTP. We recommend seeking controllers with Intel NICs as they have the highest reliability when using PTP.
+
+For more information on PTP, including getting started and setting up PTP services on your controller see [this](techref.md#precision-time-protocol) section in the Technical Reference.
 
 </p>
 
