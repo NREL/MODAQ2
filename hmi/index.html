@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../techref/">
+        <link rel="prev" href="../m2go/">
       
       
         <link rel="next" href="../configurator/">
@@ -18,12 +18,12 @@
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../img/MODAQ_favicon1.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>HMI - MODAQ 2 (M2)</title>
+        <title>HMI - MODAQ 2 (M2) Reference Design</title>
       
     
     
@@ -90,12 +90,11 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="MODAQ 2 (M2)" class="md-header__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
+    <a href=".." title="MODAQ 2 (M2) Reference Design" class="md-header__button md-logo" aria-label="MODAQ 2 (M2) Reference Design" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../img/m2_mark.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MODAQ 2 (M2)
+            MODAQ 2 (M2) Reference Design
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -193,13 +192,233 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../versions/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Versions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../hardware/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hardware
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../software/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Software
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../github/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  M2 Code Repository
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../m2go/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  M2GO
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HMI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../configurator/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Configurator
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../techref/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Technical Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../qa/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Q&A
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../links/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Useful Links
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -213,16 +432,17 @@
                     
 
 
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="MODAQ 2 (M2)" class="md-nav__button md-logo" aria-label="MODAQ 2 (M2)" data-md-component="logo">
-      
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MODAQ 2 (M2) Reference Design" class="md-nav__button md-logo" aria-label="MODAQ 2 (M2) Reference Design" data-md-component="logo">
+      
+  <img src="../img/m2_mark.png" alt="logo">
 
     </a>
-    MODAQ 2 (M2)
+    MODAQ 2 (M2) Reference Design
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -261,14 +481,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../github/" class="md-nav__link">
+      <a href="../versions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Github
+    Versions
   
 
     
@@ -342,14 +562,41 @@
   
   
     <li class="md-nav__item">
-      <a href="../techref/" class="md-nav__link">
+      <a href="../github/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Technical Reference
+    M2 Code Repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m2go/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M2GO
   
 
     
@@ -464,10 +711,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-nginx-virtual-server-configuration-file-for-hmi" class="md-nav__link">
+  <a href="#create-nginx-virtual-server-configuration-file-server-block-for-hmi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create nginx Virtual Server Configuration File for HMI
+        Create nginx Virtual Server Configuration File (Server Block) for HMI
       
     </span>
   </a>
@@ -626,6 +873,60 @@
   
   
     <li class="md-nav__item">
+      <a href="../techref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../links/" class="md-nav__link">
         
   
@@ -708,10 +1009,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-nginx-virtual-server-configuration-file-for-hmi" class="md-nav__link">
+  <a href="#create-nginx-virtual-server-configuration-file-server-block-for-hmi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create nginx Virtual Server Configuration File for HMI
+        Create nginx Virtual Server Configuration File (Server Block) for HMI
       
     </span>
   </a>
@@ -845,20 +1146,7 @@
 
 
 
-<style>
-    img[src*='#left'] {
-     float: left;
-    }
-    img[src*='#right'] {
-        float: right;
-    }
-    img[src*='#center'] {
-        display: block;
-        margin: auto;
-    }
-</style>
-
-<h1 id="m2-hmi">M2 HMI <img alt="MODAQ M2 HMI Example Design" src="../img/m2_logo.png#right" /><a class="headerlink" href="#m2-hmi" title="Permanent link">&para;</a></h1>
+<h1 id="m2-hmi">M2 HMI <img alt="MODAQ M2 HMI Example Design" src="../img/m2_icon.png#right" /><a class="headerlink" href="#m2-hmi" title="Permanent link">&para;</a></h1>
 <p></p>
 A Human-Machine Interface, or HMI, is a control panel or portal that enables high-speed, near realtime interaction with M2. It can display or plot values and allow for operator control of specifically coded elements running in M2- such as manual control of a relay. </p>
 <p><img alt="" src="../img/M2_HMI_screenshot.png#center" /></p>
@@ -883,11 +1171,11 @@ A Human-Machine Interface, or HMI, is a control panel or portal that enables hig
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The code uses offline versions of each of these libraries, which allows the HMI to operate without needing to have an active internet connection for dynamically loading the libraries from a Content Delivery Network (CDN). Because of this, the libraries are frozen in time and may not have the latest and greatest features and will lack security updates and bugfixes. At this point, the libraries appear to be sufficiently stable and since the HMI is served on a private subnet, security should not be an issue. It should be cautioned to only use the versions of those libraries that the code was originally written for, since different versions can break stuff.</p>
-<p>Further, getting offline versions of JS libraries is becoming more difficult. It used to be a given that a library would have a simple and clear link to the offline version, but that is slowly changing. Since most web servers are by nature 'online', it makes sense to pull the libraries as needed from a CDN which should assure the libraries are up to date, with all recent bugfixes and security patches. This is also smart from a marketing/tracking perspective, since the developer can have a better feel for the userbase and popularity of their scripts. However, CDNs can go down, scripts can be moved to different CDNs, developers can pull/change features or alter the licensing terms, or there can be network issues causing the script not to load, so for mission critical stuff and particularly if this server does not have continuous internet access, an offline version is necessary</p>
+<p>The code uses offline bundled versions of each of these libraries, which allows the HMI to operate without the need to have a persistent internet connection for dynamically loading the libraries from a Content Delivery Network (CDN). Because of this, the libraries are frozen in time and may not have the latest and greatest features and will lack security updates and bugfixes. At this point, the libraries appear to be sufficiently stable and since the HMI is served on a private subnet, security should not be an issue. It should be cautioned to only use the versions of those libraries that the code was originally written for, since different versions can break stuff.</p>
+<p>This is admittedly a regression from modern web-stack architecture practices, however we're purposely placing the processing burden on the browser and not the server, since the server in this case is also our DAQ controller. We're prioritizing the M2 data acquisition and control tasks by keeping HMI serving impacts low.</p>
 </div>
 <h3 id="nginx-configuration">nginx Configuration<a class="headerlink" href="#nginx-configuration" title="Permanent link">&para;</a></h3>
-<p>nginx can be install with the following terminal command:</p>
+<p>nginx can be installed with the following terminal command:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo apt install nginx
 </span></code></pre></div>
 <p>Configuration of nginx will live in these folders:</p>
@@ -898,20 +1186,20 @@ A Human-Machine Interface, or HMI, is a control panel or portal that enables hig
 <p>The website (HMI) is hosted from the <code>/var/www/</code> folder by default. Multiple websites can be hosted simultaneously with nginx and they can be kept organized in their own folders. This discussion will assume a folder called <code>modaq_hmi</code> was created in <code>/var/www/</code></p>
 <p>Since the config and content folders live in root, permissions will be necessary to manipulate these files from a standard user account. Using temporary privilege escalation (<code>sudo</code>) will suffice for the nginx configuration files, but this can get tedious for the HMI content pages. Best Practices would be to edit these files in user space (i.e. a folder downstream of the user's /home folder) and include them in version control (github), then copy them to the production space (<code>/var/www/modaq_hmi</code>) when ready to take them live.</p>
 <h4 id="set-user-permissions-to-nginx-web-page-folder">Set User Permissions to nginx Web Page Folder<a class="headerlink" href="#set-user-permissions-to-nginx-web-page-folder" title="Permanent link">&para;</a></h4>
-<p>While this is optional, it will make life easier during the dev process to add user permissions to thw <code>/var/www/modaq_hmi</code> folder. Otherwise, every single change will require sudo privilege escalation.  </p>
+<p>While this is optional, it will make life easier during the dev process to add user permissions to the <code>/var/www/modaq_hmi</code> folder. Otherwise, every single change will require sudo privilege escalation.  </p>
 <p>This sets the local user 'modaq' with rwx privileges in the modaq_hmi folder recursively:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo setfacl -R -m u:modaq:rwx /var/www/modaq_hmi
 </span></code></pre></div>
 <p>It may be necessary to do a chmod afterwards:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo chmod -R 755 /var/www/modaq_hmi
 </span></code></pre></div>
-<h4 id="create-nginx-virtual-server-configuration-file-for-hmi">Create nginx Virtual Server Configuration File for HMI<a class="headerlink" href="#create-nginx-virtual-server-configuration-file-for-hmi" title="Permanent link">&para;</a></h4>
+<h4 id="create-nginx-virtual-server-configuration-file-server-block-for-hmi">Create nginx Virtual Server Configuration File (Server Block) for HMI<a class="headerlink" href="#create-nginx-virtual-server-configuration-file-server-block-for-hmi" title="Permanent link">&para;</a></h4>
 <p>As noted earlier, nginx creates two folders for the server configuration. The <code>sites-available</code> folder contains the configurations for one or more websites, while the <code>sites-enabled</code> folder contain the configuration(s) for the site(s) that nginx is currently serving. Think of <code>sites-available</code> as the parking area and <code>sites-enabled</code> as the active/production area. Instead of actually moving or copying the configuration file to the <code>sites-enabled</code> folder, nginx expects only a <a href="https://www.geeksforgeeks.org/how-to-symlink-a-file-in-linux/" target="_blank">symbolic link</a> to the file in the <code>sites-available</code> folder. The following shows the contents of a configuration file that works for us:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="l l-Scalar l-Scalar-Plain">server {</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">listen 80;</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">listen [::]:80;</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">root /var/www;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">root /var/www/modaq_hmi;</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain"># Add index.php to the list if you are using PHP</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">index index.html index.htm;</span>
@@ -930,12 +1218,13 @@ A Human-Machine Interface, or HMI, is a control panel or portal that enables hig
 <p>A couple of notes about this configuration: </p>
 <ol>
 <li>This configuration is for an unsecured connection (i.e. not https://) and is probably safe for the private subnet which serves this HMI. However, the commented section on <code>SSL configuration</code> could be enabled to provide secure connections- if certificate dependencies are met. Some web browsers might complain about connecting to the HMI citing that the connection is unsecure and potentially dangerous if SSL is not enabled. It may be necessary to click through some warnings or whitelist the site. </li>
-<li>The entry for <code>server_name</code> was an attempt allow users to type modaq.hmi into their browser instead of having to know the IP address of the controller. While that would be convenient, more work needs to be done to get it working, so we backburnered this for other priorities. </li>
+<li>The entry for <code>server_name</code> was an attempt to allow users to type modaq.hmi into their browser instead of having to know the IP address of the controller. While that would be convenient, more work needs to be done to get it working, so we backburnered this for other priorities. </li>
 </ol>
 <h4 id="ubuntu-firewall-rules">Ubuntu Firewall Rules<a class="headerlink" href="#ubuntu-firewall-rules" title="Permanent link">&para;</a></h4>
 <p>If the Ubuntu firewall (<code>ufw</code>) is enabled on the controller, it may be necessary to create a firewall rule to allow nginx to access the network. This is done with a simple terminal command:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo ufw allow &#39;Nginx HTTP&#39;
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo ufw allow &#39;Nginx HTTP&#39;
 </span></code></pre></div>
+NOTE: The capitalization (Nginx HTTP) is not an error.</p>
 <h2 id="rosbridge-server">ROSBridge Server<a class="headerlink" href="#rosbridge-server" title="Permanent link">&para;</a></h2>
 <p>The primary mechanism providing connectivity between ROS2 nodes running on M2 and the nginx web server is a websocket that is managed through rosbridge and roslibjs. Rosbridge is the service running along with M2 ROS2 nodes and exposes all published topics to a websocket.</p>
 <p>If the rosbridge_suite was properly installed, the rosbridge server can be started with this command:</p>
@@ -969,9 +1258,10 @@ A Human-Machine Interface, or HMI, is a control panel or portal that enables hig
 <p>The tile system (aka <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">grid</a>) is quite flexible, allowing one to many content tiles on each row. While the height of each row can be constrained, the example included in this repo allows the height to grow to fill the content. The width of each tile is constrained to a fraction of the overall width allowed by the top-level (parent) div container. </p>
 <p>Diving deeper, the parent div is configured with 4 available columns in the included <code>style.css</code> file and looking at the screen shot of the HMI page at the beginning of this section, the MODAQ banner is allowed to span 3 columns in width, while the rosbridge status tile is set to 1 column- for a grand total of 4 columns. </p>
 <h4 id="roslib-subscriber">roslib Subscriber<a class="headerlink" href="#roslib-subscriber" title="Permanent link">&para;</a></h4>
-<p>roslib.js is a javascript library used on the webserver that can subscribe to topics published on M2 and display the data in a webpage. In addition it allows for publication of topics from the webpage as well as using or creating services.</p>
+<p>roslib.js is a javascript library used in the web code that can subscribe to topics published on M2 and display the data in a webpage. In addition it allows for publication of topics from the webpage as well as using or creating services.</p>
 <p>First, an object is created to establish the websocket connection to the ROS2 instance on the M2 controller (showing the most relevant code snippet):</p>
-<p><code>const ros = new ROSLIB.Ros({ url: "ws://localhost:9090" });</code><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p><code>const ros = new ROSLIB.Ros({ url: "ws://localhost:9090" });</code> </p>
+<p>NOTE: Replace 'localhost' with the IP address of the M2 controller hosting the HMI webpage.</p>
 <p>Next, a listener object is created to subscribe to the desired topic being published on the controller. In this example we have a temperature and humidity sensor that is acquired in M2 using MODBUS TCP and the scaled data are published to the <code>ths</code> topic. </p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// MODBUS Temperature and Humidity Sensor</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">ths_listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ROSLIB</span><span class="p">.</span><span class="nx">Topic</span><span class="p">({</span>
@@ -1029,14 +1319,14 @@ We had previously created a unique message schema for the HMI in ROS2 on the M2 
 In this snippet, if the humidity is &gt;90, the traffic light identified by the tag <code>status1</code> is styled using a combination of two CSS classes: <code>traffic_light false</code>, which in this case will color it red. Similarly, if it's &gt;65, it's colored yellow, otherwise it's green. </p>
 <h4 id="streaming-charts">Streaming Charts<a class="headerlink" href="#streaming-charts" title="Permanent link">&para;</a></h4>
 <p>We chose chart.js as the charting engine for the M2 HMI, since it's highly customizable, capable, and looks good. It also has great support (both from the developer and user community), which is important, since it can be a little complicated to use. Because of this complexity, this section will not go into detail on its use, but will point out a few details around getting the streaming to work correctly - particularly with multivariate/dual-axis plots. </p>
-<p>chart.js, without the <code>chartjs-plugin-streaming</code> plugin, expects to be passed a static numeric array and it renders into a plot
+<p>chart.js, without the <code>chartjs-plugin-streaming</code> plugin, expects to be passed a static numeric array that it renders into a plot
 with the selected attributes. The streaming plugin (basically) creates a fifo buffer for the data points and animates them on the x-axis.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>limit the chart history in order to assure smooth operation- especially with multiple charts on a single HMI page.</p>
 </div>
 <p>The architecture of the HMI web stack purposely places the computational burden of chart composition and rendering on the web client (i.e. your browser) not the M2 controller. Therefore, low-powered computers may struggle with smooth animation if the HMI has a lot of plots and/or the chart history is too big. The example included in this repo updates the chart at 1 Hz and displays up to 1 minute of data history. The update rate and history depth can be adjusted to preference.</p>
-<p>chart.js breaks up the chart composition into 3 blocks: setup, config, and render. The setup block defines the y-axis datasets, labels, and plot trace attributes. The config block expands on this by defining additional attributes and binding the dataset(s) to an object that gets rendered in the render block. This all expects the data to formatted as an array, however our data are constructed into objects. </p>
+<p>chart.js breaks up the chart composition into 3 blocks: setup, config, and render. The setup block defines the y-axis datasets, labels, and plot trace attributes. The config block expands on this by defining additional attributes and binding the dataset(s) to an object that gets rendered in the render block. This all expects the data to be formatted as an array, however our data are constructed into objects. </p>
 <p>To overcome this, we define a object literal to map the y-axis label(s) to the label used to identify the desired element in the data object (example for the accelerometer data). </p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>const dataMap = { Ax: &#39;ax&#39;, Ay: &#39;ay&#39;, Az: &#39;az&#39; };
 </span></code></pre></div>
@@ -1063,16 +1353,13 @@ Then we insert each data point into the chart object:</p>
 <hr />
 <ol>
 <li id="fn:1">
-<p>Using the minified version of any of the required JS libraries is totally optional. We prefer minified, since it's a smaller overall payload and can improve performance. The disadvantage to using minified libraries is that all unnecessary whitespace characters are removed, so inspecting or edited the library code can be very difficult- even though it's still in plain text.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Using the minified version of any of the required JS libraries is totally optional. We prefer minified, since it's a smaller overall payload and can improve performance. The disadvantage to using minified libraries is that all unnecessary whitespace characters are removed, as are comments, and some optimizations may be applied (i.e. variable name shortening), so inspecting or editing the library code can be very difficult- even though it's still in plain text.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
 <p>We're using chartjs v3.3.2 since at the time we were creating the HMI there were compatibility issues with the plugin-streaming library on v4 and higher. That may have been resolved in later releases of plugin-streaming.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p>Since finding the dependencies as minified libraries in the correct version can be a bit of a pain, here are direct links: <a href="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js" target="_blank">luxon v3.4.40<a/> and <a href="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0" target="_blank">chartjs-adapter-luxon v1.0.0</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:4">
-<p>Replace 'localhost' with the IP address of the M2 controller hosting the HMI webpage.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1096,19 +1383,60 @@ Then we insert each data point into the chart object:</p>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../m2go/" class="md-footer__link md-footer__link--prev" aria-label="Previous: M2GO">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                M2GO
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../configurator/" class="md-footer__link md-footer__link--next" aria-label="Next: Configurator">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Configurator
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -1125,7 +1453,7 @@ Then we insert each data point into the chart object:</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>

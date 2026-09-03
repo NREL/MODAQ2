@@ -1,3 +1,108 @@
-[data-md-color-scheme="NLR_Blue"] {
-    --md-primary-fg-color:        #EE0F0F;
+/* Top banner */
+[data-md-color-scheme="default"] {
+  /* --md-primary-bg-color:        #DB9728; */
+  /* --md-primary-fg-color:        #0079c2; */
+  --md-primary-fg-color: #003A69;
+
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #003A69;
+}
+
+/* # level headers */
+.md-typeset h1 {
+  font-weight: 700;
+}
+
+/* ## level headers */
+.md-typeset h2 {
+  font-weight: 400;
+}
+
+/* Links to content pages */
+.md-tabs {
+  font-weight: 700;
+}
+
+/* dark mode link colors */
+[data-md-color-scheme="slate"] .md-content a:link {
+    color: #7CC4FF;
+    /* color: #6FC2FF; */
   }
+
+  [data-md-color-scheme="slate"] .md-content a:visited {
+    color: #B88CFF;
+    /* color: #8EA2FF; */
+  }
+
+  [data-md-color-scheme="slate"] .md-content a:hover {
+    color: #ffd166;
+  }
+
+/* light mode link colors */
+[data-md-color-scheme="default"] .md-content a:link {
+    color: #0079c2;
+  }
+
+  [data-md-color-scheme="default"] .md-content a:visited {
+    color: #003A69;
+  }
+
+  [data-md-color-scheme="default"] .md-content a:hover {
+    color: #DB9728;
+  }
+
+
+
+/*.md-grid {
+    max-width: 97%;
+}
+.md-main__inner.md-grid {
+  max-width: initial;
+}
+
+.md-content {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+*/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+img[src*='#left'] {
+  float: left;
+}
+
+img[src*='#right'] {
+  float: right;
+}
+
+img[src*='#center'] {
+  display: block;
+  margin: auto;
+}
+
+ul li {
+  /*line-height: 0.5rem;*/
+}
+
+/* FIXME (size/appearance and dark mode): Add an icon to links that open in a new tab */
+/* 
+a[target="_blank"]::after {
+  content: url(../img/new-tab-icon-20.png);
+  display: inline-block;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  transform: scale(0.65);
+}*/
